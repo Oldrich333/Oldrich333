@@ -66,3 +66,4 @@ I care about **tech, soul, and biology** — because the interesting problems li
 ---
 
 *If you're building agent-native systems, thinking about long-horizon reasoning, or working on the tech/soul/biology intersection — reach out. The work is more interesting when it's shared.*
+
