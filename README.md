@@ -2,7 +2,7 @@
 
 > *Visionary grounded in reality. Lost everything to find the real.*
 > *Bridging Tech, Soul & Biology. I ignite fires, not spreadsheets.*
-> *Building systems that heal.*
+> *Building systems thatv heal.*
 
 🌍 **Highlands roots · Global reach · Czech Republic 🇨🇿**
 
