@@ -8,6 +8,8 @@
 
 [![X](https://img.shields.io/badge/X-%40Oldrich333-000000?style=flat-square&logo=x)](https://x.com/Oldrich333)
 [![raisin](https://img.shields.io/badge/Project-raisin%20🍇-8B4789?style=flat-square)](https://github.com/Oldrich333/raisin)
+[![full-review](https://img.shields.io/badge/Project-full--review%20🔍-44cc11?style=flat-square)](https://github.com/Oldrich333/full-review)
+[![ax-headers](https://img.shields.io/badge/Project-ax--headers%20📌-4A90E2?style=flat-square)](https://github.com/Oldrich333/ax-headers)
 
 ---
 
@@ -17,9 +19,19 @@ I build **AI agent systems** — not demos, not benchmarks for their own sake, r
 
 ### 🍇 [raisin](https://github.com/Oldrich333/raisin) — public
 
-My first open release. A methodology and Claude Code skill that lets LLMs write Python for themselves instead of mimicking human conventions. **~50% fewer tokens, 100% same functionality.** Verified by 786 tests across six experiments on Click, Flask, Bottle, and greenfield programs.
+A methodology and Claude Code skill that lets LLMs write Python for themselves instead of mimicking human conventions. **~50 % fewer tokens, 100 % same functionality.** Verified by 786 tests across six experiments on Click, Flask, Bottle, and greenfield programs.
 
 The point isn't compression for its own sake. The point is: when you stop making the LLM copy human ceremony, you see what the LLM actually wants to write — and it's faster, cleaner, and denser. raisin is the first measurable proof of that.
+
+### 🔍 [full-review](https://github.com/Oldrich333/full-review) — public
+
+Code review skill for Claude Code and Codex CLI. Where most agent-based reviewers stall around 0.40 recall (five parallel specialists each doing a shallow pass), a **single persistent LLM session running nine sequential turns** — taxonomy scan → six focused perspectives → sweep → merge — hits **0.80–0.87 recall on a 15-bug benchmark**.
+
+The path from 0.40 to 0.80 was not obvious. v1 parallel specialists were worse than one smart prompt. v3 checklist (taxonomy-in-prompt) added 50 %. v4 unified_harness (persistent session, categories as separate turns) got the rest. Ships with the full benchmark harness — reproducible on any fixture with any LLM. Pairs with ax-headers.
+
+### 📌 [ax-headers](https://github.com/Oldrich333/ax-headers) — public
+
+One-line machine-readable header on every Python file: `# AX: TAG | SUM: one-line summary | SIG: version-tag`. Tells an LLM what the file is and what version of behavior it encodes — **before the file is opened**. Deployed across ~350 files in production; cut agent triage context usage by ~30 %. A tiny convention with outsized effect on how agents navigate a codebase. Pairs with raisin (dense authoring style) and full-review (catches AX drift during review).
 
 ### 🧠 Atlas — in development
 
@@ -50,7 +62,8 @@ I care about **tech, soul, and biology** — because the interesting problems li
 ## Topics on my mind right now
 
 - **Agent-native architecture** — code, protocols, and infrastructure designed for AI agents from line one, not retrofitted from human conventions
-- **LLM-native code** — writing programs for machine reading first ([raisin](https://github.com/Oldrich333/raisin) is the measurable version)
+- **LLM-native code** — writing programs for machine reading first ([raisin](https://github.com/Oldrich333/raisin) is the measurable version, [ax-headers](https://github.com/Oldrich333/ax-headers) is the orientation layer)
+- **Agent code review as methodology, not magic** — [full-review](https://github.com/Oldrich333/full-review) shows the gap from 0.40 → 0.80 recall is a process choice, not a model upgrade
 - **Long-horizon reasoning** — how to make an AI care about a mission across weeks, not just within a conversation
 - **Context engineering** — memory, surfacing, compression, retrieval as a design discipline, not an afterthought
 - **Collective intelligence** — making 100 agents actually smarter than one, not dumber
