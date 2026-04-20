@@ -8,8 +8,8 @@
 
 [![X](https://img.shields.io/badge/X-%40Oldrich333-000000?style=flat-square&logo=x)](https://x.com/Oldrich333)
 [![raisin](https://img.shields.io/badge/Project-raisin%20🍇-8B4789?style=flat-square)](https://github.com/Oldrich333/raisin)
-[![full-review](https://img.shields.io/badge/Project-full--review%20🔍-44cc11?style=flat-square)](https://github.com/Oldrich333/full-review)
-[![ax-headers](https://img.shields.io/badge/Project-ax--headers%20📌-4A90E2?style=flat-square)](https://github.com/Oldrich333/ax-headers)
+[![Rival](https://img.shields.io/badge/Project-Rival%20🔍-44cc11?style=flat-square)](https://github.com/Oldrich333/full-review)
+[![Waypoint](https://img.shields.io/badge/Project-Waypoint%20📌-4A90E2?style=flat-square)](https://github.com/Oldrich333/ax-headers)
 
 ---
 
@@ -23,15 +23,13 @@ A methodology and Claude Code skill that lets LLMs write Python for themselves i
 
 The point isn't compression for its own sake. The point is: when you stop making the LLM copy human ceremony, you see what the LLM actually wants to write — and it's faster, cleaner, and denser. raisin is the first measurable proof of that.
 
-### 🔍 [full-review](https://github.com/Oldrich333/full-review) — public
+### 🔍 [Rival](https://github.com/Oldrich333/full-review) — public
 
-Code review skill for Claude Code and Codex CLI. Where most agent-based reviewers stall around 0.40 recall (five parallel specialists each doing a shallow pass), a **single persistent LLM session running nine sequential turns** — taxonomy scan → six focused perspectives → sweep → merge — hits **0.80–0.87 recall on a 15-bug benchmark**.
+**Adversarial code review that escapes AI confirmation bias.** When you ask the same LLM that wrote your code to review it, you get a rubber stamp — it stays in the cognitive track that produced the bug. Rival runs a single persistent LLM session through nine sequential passes and then hands the code to a different model family for cross-family review (Claude wrote it → Gemini and Codex tear it down). **0.80–0.87 recall on a 15-bug benchmark vs 0.40 for the "five parallel specialists" pattern most plugins ship.** Bug patterns learned get appended to a taxonomy — the skill gets smarter on your codebase over time. Installs as a Claude Code plugin or a Codex CLI skill. Ships the full benchmark harness; reproduce the numbers on your own fixtures with any LLM.
 
-The path from 0.40 to 0.80 was not obvious. v1 parallel specialists were worse than one smart prompt. v3 checklist (taxonomy-in-prompt) added 50 %. v4 unified_harness (persistent session, categories as separate turns) got the rest. Ships with the full benchmark harness — reproducible on any fixture with any LLM. Pairs with ax-headers.
+### 📌 [Waypoint](https://github.com/Oldrich333/ax-headers) — public
 
-### 📌 [ax-headers](https://github.com/Oldrich333/ax-headers) — public
-
-One-line machine-readable header on every Python file: `# AX: TAG | SUM: one-line summary | SIG: version-tag`. Tells an LLM what the file is and what version of behavior it encodes — **before the file is opened**. Deployed across ~350 files in production; cut agent triage context usage by ~30 %. A tiny convention with outsized effect on how agents navigate a codebase. Pairs with raisin (dense authoring style) and full-review (catches AX drift during review).
+**One-line machine-readable headers that cut AI context bloat by 30 %.** Your AI assistant flies blind through codebases — it burns thousands of tokens opening files just to figure out what they are. Waypoint is a single dense line on line 1 of every Python file: `# AX: TAG | SUM: purpose | SIG: version-tag`. The agent reads the directory list, sees each file's role and behavior version, and only loads the body when the task demands it. **~350-file production codebase, measured ~30 % reduction in triage-task context tokens.** Grep-friendly architecture (`grep -l '^# AX: CONN'` lists every connector) turns docs-drift into a non-problem. Ships a pre-commit hook, a five-check lifecycle spec, and zero dependencies.
 
 ### 🧠 Atlas — in development
 
