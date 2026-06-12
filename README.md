@@ -10,6 +10,9 @@
 [![raisin](https://img.shields.io/badge/Project-raisin%20🍇-8B4789?style=flat-square)](https://github.com/Oldrich333/raisin)
 [![full-review](https://img.shields.io/badge/Project-full--review%20🔍-44cc11?style=flat-square)](https://github.com/Oldrich333/full-review)
 [![ax-headers](https://img.shields.io/badge/Project-ax--headers%20📌-4A90E2?style=flat-square)](https://github.com/Oldrich333/ax-headers)
+[![smart-read](https://img.shields.io/badge/Project-smart--read%20📖-E8A33D?style=flat-square)](https://github.com/Oldrich333/smart-read)
+[![hard-compact](https://img.shields.io/badge/Project-hard--compact%20🗜️-CC4444?style=flat-square)](https://github.com/Oldrich333/hard-compact)
+[![hive](https://img.shields.io/badge/Project-hive%20🐝-F5B700?style=flat-square)](https://github.com/Oldrich333/hive)
 
 ---
 
@@ -31,13 +34,21 @@ The point isn't compression for its own sake. The point is: when you stop making
 
 **One-line machine-readable headers that cut AI context bloat by ~30 %.** Your AI assistant flies blind through codebases — it burns thousands of tokens opening files just to figure out what they are. ax-headers is one dense line on line 1 of every Python file: `# AX: TAG | SUM: purpose | SIG: version-tag`. The agent reads the directory list, sees each file's role and behavior version, and only loads the body when the task demands it. **~350-file production codebase, measured ~30 % reduction in triage-task context tokens.** Grep-friendly architecture (`grep -l '^# AX: CONN'` lists every connector) turns docs-drift into a non-problem. Ships a bash pre-commit hook, a five-check lifecycle spec, and zero dependencies.
 
+### 📖 [smart-read](https://github.com/Oldrich333/smart-read) — public
+
+**Token-efficient file read/grep/glob for AI agents.** An agent that `cat`s a 65 KB file pays for those bytes on every turn afterward. smart-read returns a structural outline instead (**0.7 % of the bytes**, measured on Flask), a `file: count` summary for large greps (**1.0 % of raw grep**), and explicit escalation (`focus='fn'`, `lines='N-M'`, `raw=true`) when the model genuinely needs more. Secret-safe by construction: values in `.env`/keys/credentials are redacted before they ever reach the model's context. Single stdlib-only file + a zero-dependency MCP server for Claude Code / Codex CLI. Pairs with [ax-headers](https://github.com/Oldrich333/ax-headers).
+
+### 🗜️ [hard-compact](https://github.com/Oldrich333/hard-compact) — public
+
+Drop-in custom compact prompts for Claude Code and Codex CLI that stop a long-running agent from lobotomizing itself at the auto-compact boundary — preserving real findings and decisions instead of summarizing them away.
+
 ### 🧠 Atlas — in development
 
 Orchestrated intelligence. Dozens to hundreds of AI "brains" collaborating the way a multidisciplinary research institute would. Not a chatbot, not a single large model with tools — an *institute of models* with governance, memory, specialisation, and long-horizon goals. A path toward AGI/ASI through collective intelligence, not a bigger transformer.
 
-### 🐝 Hive — in development
+### 🐝 [Hive](https://github.com/Oldrich333/hive) — in production, preview public
 
-The firm OS. Autonomous business operations where AI agents run the day-to-day — customer work, research, decisions, coordination. Built on graph-powered context and persistent institutional memory. The thesis: a 100-agent team running 24/7 with perfect memory beats a 100-person team who forgets.
+The firm OS. Autonomous business operations where AI agents run the day-to-day — customer work, research, decisions, coordination. Built on a living catalog of operational state and persistent institutional memory. The thesis: a 100-agent team running 24/7 with perfect memory beats a 100-person team who forgets. Running real businesses in production today; [public preview is up](https://github.com/Oldrich333/hive) (no code yet), and the generally useful pieces get extracted as standalone repos — raisin, full-review, ax-headers, smart-read, and hard-compact all came out of it. If you're building something similar, reach out.
 
 ### 📚 HCA — in development
 
