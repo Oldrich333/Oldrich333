@@ -1,0 +1,23 @@
+{
+  "title": "Proton Radius Triangulation: Source-Calibrated Small-Radius Support with Scattering Source-Ceiling Caveats",
+  "upload_type": "publication",
+  "publication_type": "technicalnote",
+  "description": "Public archive packet for Proton Radius Triangulation. The June 23 prove-gate-confirmed packet reports source-backed small-radius support with explicit caveats: Triangulation A is the lead confirmed no-fit support leg, Triangulation B is retained as conditional ordinary-H support with convention-explicit significance, and RF-ENV-01 is retained only as an artifact-validated conditional diagnostic rather than a terminal proof. The archive excludes local copies of third-party PDFs and ancillary source files; those sources are cited in a source ledger and remain under their original terms.",
+  "creators": [
+    {
+      "name": "Oldřich Dvořák",
+      "orcid": "0009-0009-7912-296X",
+      "affiliation": "Oldrich Research OS"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "proton charge radius",
+    "electron-proton scattering",
+    "lattice QCD",
+    "dispersion theory",
+    "source-ceiling audit",
+    "Hive Research OS"
+  ],
+  "notes": "Hive publication id: 8a42b5bf-1b76-4417-8c0c-d9cc6cc4b444. Hive Research OS assisted discovery and validation as methodology/tooling, not as a human author."
+}

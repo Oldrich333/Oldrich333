@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-06-24T05:30:01.752275+00:00",
+  "doi": "10.5281/zenodo.20820405",
+  "doi_url": "https://doi.org/10.5281/zenodo.20820405",
+  "git_tag": "proton-radius-triangulation-v1.0",
+  "github_mirror_url": "https://github.com/Oldrich333/Oldrich333/tree/main/research/proton-radius-triangulation",
+  "github_path": "research/proton-radius-triangulation",
+  "github_raw_zip_url": "https://github.com/Oldrich333/Oldrich333/raw/main/research/proton-radius-triangulation/release_artifacts/proton-radius-triangulation_public_release_2026-06-23.zip",
+  "github_repo": "Oldrich333/Oldrich333",
+  "provenance_note": "Public GitHub mirror generated from the sanitized Zenodo public release archive; internal evidence bundles and third-party source files are not mirrored.",
+  "publication_id": "8a42b5bf-1b76-4417-8c0c-d9cc6cc4b444",
+  "source_archive": "proton-radius-triangulation_public_release_2026-06-23.zip",
+  "title": "Proton Radius Triangulation: Source-Calibrated Small-Radius Support with Scattering Source-Ceiling Caveats",
+  "zenodo_record_url": "https://zenodo.org/records/20820405"
+}
